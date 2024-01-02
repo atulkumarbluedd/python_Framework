@@ -1,2 +1,12 @@
 # we want to achieve command line execution to decide where our test will be executed i.e. in chrome or in firefox
 #  py.test --browser_name firefox  --> run all test cases in firefox using cmd
+
+# smarter way to create oject once and use it further, this can be done via returning page object whenever we are clicking
+# and moving into the new page, this way we can optimize the code
+
+# pending ********************
+need to write a code when test is failed add screenshot
+
+# read data using excel file
+pip install openpyxl
+
