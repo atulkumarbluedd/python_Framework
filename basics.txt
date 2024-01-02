@@ -1,0 +1,2 @@
+# we want to achieve command line execution to decide where our test will be executed i.e. in chrome or in firefox
+#  py.test --browser_name firefox  --> run all test cases in firefox using cmd
