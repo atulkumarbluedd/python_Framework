@@ -14,7 +14,7 @@ from utilities.BaseClass import BaseClass
 # so we need not to mention explicitly
 class TestOne(BaseClass):
 
-    def test_e2e(self, getData):
+    def test_e2e(self, getData): # here u can provide getData or getExcelData based on requirement we can fetch from excel or simple object as well
         logger = self.getLogger()
         # homepage = HomePage(self.driver)
         # checkoutpage = homepage.shopItem()
@@ -31,4 +31,8 @@ class TestOne(BaseClass):
     # if this was getting used by other classes also then we would have defined it in BaseClass or conftest
     @pytest.fixture(params=HomePageData.test_HomePage_Data)
     def getData(self, request):
+        return request.param
+
+    @pytest.fixture(params=HomePageData.getExcelData())
+    def getExcel_Data(self, request):
         return request.param
